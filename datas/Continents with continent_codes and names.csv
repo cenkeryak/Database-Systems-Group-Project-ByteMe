@@ -1,0 +1,236 @@
+﻿iso_code,location,continent,continent_code
+AFG,Afghanistan,Asia,AS
+ALB,Albania,Europe,EU
+DZA,Algeria,Africa,AF
+AND,Andorra,Europe,EU
+AGO,Angola,Africa,AF
+AIA,Anguilla,North America,NA
+ATG,Antigua and Barbuda,North America,NA
+ARG,Argentina,South America,SA
+ARM,Armenia,Asia,AS
+ABW,Aruba,North America,NA
+AUS,Australia,Oceania,OC
+AUT,Austria,Europe,EU
+AZE,Azerbaijan,Asia,AS
+BHS,Bahamas,North America,NA
+BHR,Bahrain,Asia,AS
+BGD,Bangladesh,Asia,AS
+BRB,Barbados,North America,NA
+BLR,Belarus,Europe,EU
+BEL,Belgium,Europe,EU
+BLZ,Belize,North America,NA
+BEN,Benin,Africa,AF
+BMU,Bermuda,North America,NA
+BTN,Bhutan,Asia,AS
+BOL,Bolivia,South America,SA
+BES,Bonaire Sint Eustatius and Saba,North America,NA
+BIH,Bosnia and Herzegovina,Europe,EU
+BWA,Botswana,Africa,AF
+BRA,Brazil,South America,SA
+VGB,British Virgin Islands,North America,NA
+BRN,Brunei,Asia,AS
+BGR,Bulgaria,Europe,EU
+BFA,Burkina Faso,Africa,AF
+BDI,Burundi,Africa,AF
+KHM,Cambodia,Asia,AS
+CMR,Cameroon,Africa,AF
+CAN,Canada,North America,NA
+CPV,Cape Verde,Africa,AF
+CYM,Cayman Islands,North America,NA
+CAF,Central African Republic,Africa,AF
+TCD,Chad,Africa,AF
+CHL,Chile,South America,SA
+CHN,China,Asia,AS
+COL,Colombia,South America,SA
+COM,Comoros,Africa,AF
+COG,Congo,Africa,AF
+COK,Cook Islands,Oceania,OC
+CRI,Costa Rica,North America,NA
+CIV,Cote d'Ivoire,Africa,AF
+HRV,Croatia,Europe,EU
+CUB,Cuba,North America,NA
+CUW,Curacao,North America,NA
+CYP,Cyprus,Europe,EU
+CZE,Czechia,Europe,EU
+COD,Democratic Republic of Congo,Africa,AF
+DNK,Denmark,Europe,EU
+DJI,Djibouti,Africa,AF
+DMA,Dominica,North America,NA
+DOM,Dominican Republic,North America,NA
+ECU,Ecuador,South America,SA
+EGY,Egypt,Africa,AF
+SLV,El Salvador,North America,NA
+OWID_ENG,England,Europe,EU
+GNQ,Equatorial Guinea,Africa,AF
+ERI,Eritrea,Africa,AF
+EST,Estonia,Europe,EU
+SWZ,Eswatini,Africa,AF
+ETH,Ethiopia,Africa,AF
+FRO,Faeroe Islands,Europe,EU
+FLK,Falkland Islands,South America,SA
+FJI,Fiji,Oceania,OC
+FIN,Finland,Europe,EU
+FRA,France,Europe,EU
+PYF,French Polynesia,Oceania,OC
+GAB,Gabon,Africa,AF
+GMB,Gambia,Africa,AF
+GEO,Georgia,Asia,AS
+DEU,Germany,Europe,EU
+GHA,Ghana,Africa,AF
+GIB,Gibraltar,Europe,EU
+GRC,Greece,Europe,EU
+GRL,Greenland,North America,NA
+GRD,Grenada,North America,NA
+GUM,Guam,Oceania,OC
+GTM,Guatemala,North America,NA
+GGY,Guernsey,Europe,EU
+GIN,Guinea,Africa,AF
+GNB,Guinea-Bissau,Africa,AF
+GUY,Guyana,South America,SA
+HTI,Haiti,North America,NA
+HND,Honduras,North America,NA
+HKG,Hong Kong,Asia,AS
+HUN,Hungary,Europe,EU
+ISL,Iceland,Europe,EU
+IND,India,Asia,AS
+IDN,Indonesia,Asia,AS
+IRN,Iran,Asia,AS
+IRQ,Iraq,Asia,AS
+IRL,Ireland,Europe,EU
+IMN,Isle of Man,Europe,EU
+ISR,Israel,Asia,AS
+ITA,Italy,Europe,EU
+JAM,Jamaica,North America,NA
+JPN,Japan,Asia,AS
+JEY,Jersey,Europe,EU
+JOR,Jordan,Asia,AS
+KAZ,Kazakhstan,Asia,AS
+KEN,Kenya,Africa,AF
+KIR,Kiribati,Oceania,OC
+OWID_KOS,Kosovo,Europe,EU
+KWT,Kuwait,Asia,AS
+KGZ,Kyrgyzstan,Asia,AS
+LAO,Laos,Asia,AS
+LVA,Latvia,Europe,EU
+LBN,Lebanon,Asia,AS
+LSO,Lesotho,Africa,AF
+LBR,Liberia,Africa,AF
+LBY,Libya,Africa,AF
+LIE,Liechtenstein,Europe,EU
+LTU,Lithuania,Europe,EU
+LUX,Luxembourg,Europe,EU
+MAC,Macao,Asia,AS
+MDG,Madagascar,Africa,AF
+MWI,Malawi,Africa,AF
+MYS,Malaysia,Asia,AS
+MDV,Maldives,Asia,AS
+MLI,Mali,Africa,AF
+MLT,Malta,Europe,EU
+MHL,Marshall Islands,Oceania,OC
+MRT,Mauritania,Africa,AF
+MUS,Mauritius,Africa,AF
+MEX,Mexico,North America,NA
+FSM,Micronesia (country),Oceania,OC
+MDA,Moldova,Europe,EU
+MCO,Monaco,Europe,EU
+MNG,Mongolia,Asia,AS
+MNE,Montenegro,Europe,EU
+MSR,Montserrat,North America,NA
+MAR,Morocco,Africa,AF
+MOZ,Mozambique,Africa,AF
+MMR,Myanmar,Asia,AS
+NAM,Namibia,Africa,AF
+NRU,Nauru,Oceania,OC
+NPL,Nepal,Asia,AS
+NLD,Netherlands,Europe,EU
+NCL,New Caledonia,Oceania,OC
+NZL,New Zealand,Oceania,OC
+NIC,Nicaragua,North America,NA
+NER,Niger,Africa,AF
+NGA,Nigeria,Africa,AF
+NIU,Niue,Oceania,OC
+PRK,North Korea,Asia,AS
+MKD,North Macedonia,Europe,EU
+OWID_CYN,Northern Cyprus,Asia,AS
+OWID_NIR,Northern Ireland,Europe,EU
+MNP,Northern Mariana Islands,Oceania,OC
+NOR,Norway,Europe,EU
+OMN,Oman,Asia,AS
+PAK,Pakistan,Asia,AS
+PLW,Palau,Oceania,OC
+PSE,Palestine,Asia,AS
+PAN,Panama,North America,NA
+PNG,Papua New Guinea,Oceania,OC
+PRY,Paraguay,South America,SA
+PER,Peru,South America,SA
+PHL,Philippines,Asia,AS
+PCN,Pitcairn,Oceania,OC
+POL,Poland,Europe,EU
+PRT,Portugal,Europe,EU
+PRI,Puerto Rico,North America,NA
+QAT,Qatar,Asia,AS
+ROU,Romania,Europe,EU
+RUS,Russia,Europe,EU
+RWA,Rwanda,Africa,AF
+SHN,Saint Helena,Africa,AF
+KNA,Saint Kitts and Nevis,North America,NA
+LCA,Saint Lucia,North America,NA
+SPM,Saint Pierre and Miquelon,North America,NA
+VCT,Saint Vincent and the Grenadines,North America,NA
+WSM,Samoa,Oceania,OC
+SMR,San Marino,Europe,EU
+STP,Sao Tome and Principe,Africa,AF
+SAU,Saudi Arabia,Asia,AS
+OWID_SCT,Scotland,Europe,EU
+SEN,Senegal,Africa,AF
+SRB,Serbia,Europe,EU
+SYC,Seychelles,Africa,AF
+SLE,Sierra Leone,Africa,AF
+SGP,Singapore,Asia,AS
+SXM,Sint Maarten (Dutch part),North America,NA
+SVK,Slovakia,Europe,EU
+SVN,Slovenia,Europe,EU
+SLB,Solomon Islands,Oceania,OC
+SOM,Somalia,Africa,AF
+ZAF,South Africa,Africa,AF
+KOR,South Korea,Asia,AS
+SSD,South Sudan,Africa,AF
+ESP,Spain,Europe,EU
+LKA,Sri Lanka,Asia,AS
+SDN,Sudan,Africa,AF
+SUR,Suriname,South America,SA
+SWE,Sweden,Europe,EU
+CHE,Switzerland,Europe,EU
+SYR,Syria,Asia,AS
+TWN,Taiwan,Asia,AS
+TJK,Tajikistan,Asia,AS
+TZA,Tanzania,Africa,AF
+THA,Thailand,Asia,AS
+TLS,Timor,Asia,AS
+TGO,Togo,Africa,AF
+TKL,Tokelau,Oceania,OC
+TON,Tonga,Oceania,OC
+TTO,Trinidad and Tobago,North America,NA
+TUN,Tunisia,Africa,AF
+TUR,Turkey,Asia,AS
+TKM,Turkmenistan,Asia,AS
+TCA,Turks and Caicos Islands,North America,NA
+TUV,Tuvalu,Oceania,OC
+UGA,Uganda,Africa,AF
+UKR,Ukraine,Europe,EU
+ARE,United Arab Emirates,Asia,AS
+GBR,United Kingdom,Europe,EU
+USA,United States,North America,NA
+VIR,United States Virgin Islands,North America,NA
+URY,Uruguay,South America,SA
+UZB,Uzbekistan,Asia,AS
+VUT,Vanuatu,Oceania,OC
+VAT,Vatican,Europe,EU
+VEN,Venezuela,South America,SA
+VNM,Vietnam,Asia,AS
+OWID_WLS,Wales,Europe,EU
+WLF,Wallis and Futuna,Oceania,OC
+ESH,Western Sahara,Africa,AF
+YEM,Yemen,Asia,AS
+ZMB,Zambia,Africa,AF
+ZWE,Zimbabwe,Africa,AF
