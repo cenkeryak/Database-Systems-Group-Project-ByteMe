@@ -1,4 +1,5 @@
-﻿Entity;Code;Year;Life satisfaction (0-10);Life Satisfaction(0-10);Life expectancy
+sep=;﻿
+Entity;Code;Year;Life satisfaction (0-10);Life Satisfaction(0-10);Life expectancy
 Afghanistan;AFG;2006;3.72358989715576;3.72;58.7
 Afghanistan;AFG;2007;4.40177822113037;4.4;59.1
 Afghanistan;AFG;2008;4.75838088989258;4.76;59.9
