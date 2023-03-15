@@ -45,7 +45,7 @@ important factors leading to higher death rates in the world.
 
 Attributes: 1.Country Name 2.Country Code
 
-This entity is referred to as a country and is in a relationship with all other entities. Therefore, it plays a crucial role in setting the whole database system.
+This entity is referred to as a country and is in a relationship with all other entities. Therefore, it plays a crucial role in setting up the whole database system.
 
 
 ### Continents Entity:
@@ -69,7 +69,7 @@ This entity has attributes of year, disorder types and their prevalence. This is
 Relationship: Countries “possess” life parametrics
 Attributes: 1. Year 2. Life Satisfaction 3. Life Expectancy
  
-In the process of the formation of this entity, firstly our focus is put on gathering life satisfaction data in which several rows having blank iso codes were deleted and thus making the consistency throughout the CSV document. Furthermore, with the intention of putting more descriptive attributes, life expectancy data is collected and merged with the satisfaction part of the data based on their matching iso codes and years. As a result of this process, a list of country names, iso codes, life expectancy, life satisfaction and the corresponding years are gathered in one dataset. This life parametrics entity, which is a weak entity, is expected to be in a relationship with the country entity which is called as ‘have’.
+In the process of the formation of this entity, firstly our focus is put on gathering life satisfaction data in which several rows having blank iso codes were deleted and thus making the consistency throughout the CSV document. Furthermore, with the intention of putting more descriptive attributes, life expectancy data is collected and merged with the satisfaction part of the data based on their matching iso codes and years. As a result of this process, a list of country names, iso codes, life expectancy, life satisfaction and the corresponding years are gathered in one dataset. This life parametrics entity, which is a weak entity, is expected to be in a relationship with the country entity which is called as ‘possess’.
 
 ### Suicide Entity:
 
