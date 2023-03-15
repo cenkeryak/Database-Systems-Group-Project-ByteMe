@@ -41,6 +41,9 @@ commit suicide more. Using this data, we can take precautions to prevent one of 
 important factors leading to higher death rates in the world.
 
 
+
+# Entities
+
 ### Countries Entity
 
 Attributes: 1.Country Name 2.Country Code
