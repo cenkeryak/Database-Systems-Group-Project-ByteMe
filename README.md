@@ -2,9 +2,9 @@
 
 # CS306 Project Step1 Document
 
-Group Name: Byte Me
+### Group Name: Byte Me
 
-Group Members:
+### Group Members:
 
 Alpay Naçar - 31133
 Anıl Şen - 29556
