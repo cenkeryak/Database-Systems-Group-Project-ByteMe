@@ -1,5 +1,3 @@
-# Database-Systems-Group-Project-ByteMe
-
 # CS306 Project Step1 Document
 
 ### Group Name: Byte Me
