@@ -18,14 +18,25 @@ Hasan Fırat Yılmaz - 29002
 
 
 ![](https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe/blob/a85781dcab5fc861ffc7c99d061a9073bd66596e/ER%20Model.png)
-This document is prepared for the database systems course project, and it includes the steps we passed while obtaining the data and what we are planning to do with this dataset.
+ This document is prepared for the database systems course project, and it includes the
+steps we passed while obtaining the data and what we are planning to do with this
+dataset in further steps of the project.
+ In this first step of the project, we gathered data from the website
+https://ourworldindata.org/ related to suicide, which is under the topic of health.
+Separated the dataset from the flat design into smaller portions based on the entity sets,
+the relationship sets, and the attributes. Then, we cleaned and removed duplicates from
+the datasets and created our CSV files, which we uploaded to our repository. We then
+created an ER diagram to represent the entities, relationships, and attributes, identifying
+and explaining the constraints and custom constructs.
+ In the following steps of the project, we are planning to show if suicide rates are
+correlated with the living conditions of people living in different countries by comparing
+countries' suicide rates to different parameters, such as financial status, mental health,
+the number of people with drug and alcohol disorders, and life satisfaction of people
+living in that country.
+ In conclusion, we wanted to show which living conditions are possibly causing people to
+commit suicide more. Using this data, we can take precautions to prevent one of the
+important factors leading to higher death rates in the world.
 
-In this first step of the project, we gathered data from the website https://ourworldindata.org/ related to suicide which is under the topic of health. separated the dataset from the flat design into smaller portions based on the entity sets, the relationship sets, and the attributes. We then cleaned and removed duplicates from the final sets and created our CSV files which we uploaded to our repository. We then created an ER diagram to depict the entities, relationships, and attributes, identifying and explaining the constraints and custom constructs. 
-
-We also provided a project description which includes the title of our project and explains what our database application will be, what data we are storing, and which world problems we are addressing. We also provided a link to our repository. Our project aims to create a database application that stores data related to our chosen topic and address the world problems associated with it. The data and database application will be used to gain insights about the chosen topic and help bring about solutions for the world problems.
-
-ER diagram
-explanations (Identify your CSV files and how you separated them from the flat design. Please briefly explain the cleaning steps you took, such as removing duplicates from your final sets, etc.)
 
 ### Countries Entity
 
