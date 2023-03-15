@@ -17,7 +17,7 @@ Hasan Fırat Yılmaz - 29002
 ### Description: 
 
 
-![](https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe/blob/5e842ba975d0c707a6b94d32d2819a33fbbe7ff3/ER%20MODEL.jpg)
+![](https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe/blob/a85781dcab5fc861ffc7c99d061a9073bd66596e/ER%20Model.png)
 This document is prepared for the database systems course project, and it includes the steps we passed while obtaining the data and what we are planning to do with this dataset.
 
 In this first step of the project, we gathered data from the website https://ourworldindata.org/ related to suicide which is under the topic of health. separated the dataset from the flat design into smaller portions based on the entity sets, the relationship sets, and the attributes. We then cleaned and removed duplicates from the final sets and created our CSV files which we uploaded to our repository. We then created an ER diagram to depict the entities, relationships, and attributes, identifying and explaining the constraints and custom constructs. 
