@@ -1,0 +1,5 @@
+CREATE TABLE Continents (
+cName VARCHAR(30) NOT NULL,
+cCode VARCHAR(10),
+PRIMARY KEY (cCode)
+);

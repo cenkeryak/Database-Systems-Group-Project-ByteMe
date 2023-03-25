@@ -1,0 +1,2 @@
+ALTER TABLE countriesPossessLifeParametrics
+DROP COLUMN lifeSat;
