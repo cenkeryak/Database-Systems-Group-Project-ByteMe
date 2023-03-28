@@ -1,9 +1,9 @@
 # Database-Systems-Group-Project-ByteMe
-CS306 Project Step 2 Document
+#CS306 Project Step 2 Document
 
-Group Name: Byte Me
+#Group Name: Byte Me
 
-Group Members:
+#Group Members:
 
 Alpay Naçar - 31133
 Anıl Şen - 29556
@@ -14,7 +14,7 @@ Hasan Fırat Yılmaz - 29002
 Github link: https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe
 
 
-Entity 1. Continents
+#Entity 1. Continents
 
 Initially, in the “countries_continents.csv” file, columns representing country name and iso code were dropped and later on through the deletion of duplicates on the rest of the continent name and continent code columns, “continents with continent_codes.csv” was formed. 
 Then, in mySQL table for continents was created as shown below,
@@ -30,7 +30,7 @@ After this, “continents with continent_codes.csv” is imported into the Conti
 Each continent has to include at least a country as a result of the participation constraint.
 
 
-Entity 2. Countries
+#Entity 2. Countries
 
 “countries_continents.csv” file, after it’s continent name was excluded for importation, was ready to be imported into the Countries table as shown below,
 
@@ -47,7 +47,7 @@ Here, the Include relationship is shown through the usage of foreign key referri
 Each country has at most one continent to be included by, according to the key constraint on Include relationship and every country has to be included by a continent due to participation constraint.
 
 
-Entity 3.  Life Parametrics
+#Entity 3.  Life Parametrics
 
 Following the creation of the CountriesPossessLifeParametrics table, “life_parametrics.csv” was imported into it without its column representing country names.
 
@@ -69,7 +69,7 @@ Furthermore, the Possess relationship was achieved onto one table as a result of
 As a result of the features of being a weak entity for this entity, each life parametric has at most one country to be possessed, indicating a key constraint. And every life parametric has to be possessed by a country, due to the participation constraint.
 
 
-Entity 4.  Mental Health
+#Entity 4.  Mental Health
 
 Following the creation of the havingPeopleWithMentalDisorders table, “prevalence by specific mental disorders and substance use disorder UPDATED.csv” was imported into it.
 
@@ -91,7 +91,7 @@ FOREIGN KEY (isoCode) REFERENCES Countries(isoCode) ON DELETE CASCADE
 First of all, the column that contains country names is removed from the CSV file due to the redundancy it causes. Moreover, some rows in the "prevalence of mental health disorders" excel file didn't have iso_code values, like the "AFRICAN REGION" row, which didn't have any iso_code. We removed those rows. In addition to that, some countries that were in the "prevalence of mental health disorders" file didn't exist in the "countries_continents" file. We removed the rows with data from those countries to avoid conflicts with the foreign key constraint.
 
 
-Entity 5.  Alcohol and Drug Disorder
+#Entity 5.  Alcohol and Drug Disorder
 
  “Share-with-alcohol-vs-drug-use-disorder.csv” file is imported into the AlcoholAndDrugDisorder table.
 
@@ -106,7 +106,7 @@ Entity 5.  Alcohol and Drug Disorder
 Some rows of csv files didn’t have ISO code because they don’t have their own ISO Code. For example “Western Pacific Region” does not have ISO code. Therefore, we removed these rows from the dataset before importing it to the table.
 
 
-Entity 6.  Financial Status
+#Entity 6.  Financial Status
 
 In my excel file, there are country names in place of iso codes. In the table, instead of country names, there should be iso codes corresponding to those country names. To handle this issue, firstly created a temporary table with name and year as the primary keys.
 
@@ -155,7 +155,7 @@ DROP TABLE TemporaryFinancialStatus;
 In conclusion, Have relationship and financial status of the countries was achieved on one table as a result of key constraint of one-to-many relationship. isoCode (foreign key reference from the Countries table) and year attributes are used as primary keys. This table also includes gdp and gini attributes. Additionally, there is a participation constraint for financial status entity, this is one of the reasons why this entity is a weak entity.
 
 
-Entity 7.  Suicide
+#Entity 7.  Suicide
 
 Following the creation of the Suicide table, “suicide_final.csv”(UPDATED) was imported into it.
 The reason behind updating the file was that encoding of it was not compatible with MYSQL.
