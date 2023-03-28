@@ -159,7 +159,7 @@ In conclusion, Have relationship and financial status of the countries was achie
 
 # Entity 7.  Suicide
 
-Following the creation of the Suicide table, “suicide-death-rates.csv”(UPDATED) was imported into it.
+Following the creation of the Suicide table, “suicide-death-rates.csv” was imported into it.
 The reason behind updating the file was that encoding of it was not compatible with MYSQL. One of the attributes of this entity is also deleted because of the incompatibility with the share and rate data.
 
 CREATE TABLE Suicide(
