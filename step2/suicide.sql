@@ -3,6 +3,5 @@ CREATE TABLE Suicide(
  year INTEGER NOT NULL,
  rate REAL,
  share REAL,
- ratio REAL,
  PRIMARY KEY (IsoCode, year),
  FOREIGN KEY (IsoCode) REFERENCES countries(isoCode) ON DELETE CASCADE );
