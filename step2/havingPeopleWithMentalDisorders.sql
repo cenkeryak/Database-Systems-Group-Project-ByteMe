@@ -1,5 +1,4 @@
 CREATE TABLE havingPeopleWithMentalDisorders(
-name VARCHAR(50),
 isoCode VARCHAR(10) NOT NULL,
 year int NOT NULL,
 schizophreniaPrevalence DOUBLE,
