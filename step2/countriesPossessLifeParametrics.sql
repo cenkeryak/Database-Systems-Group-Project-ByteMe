@@ -1,5 +1,4 @@
 CREATE TABLE CountriesPossessLifeParametrics(
-	name VARCHAR(50),
     isoCode VARCHAR(10) NOT NULL,
     year int NOT NULL,
     lifeSat DOUBLE,
