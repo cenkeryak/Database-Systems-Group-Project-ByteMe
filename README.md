@@ -105,6 +105,8 @@ First of all, the column that contains country names is removed from the CSV fil
 
 Some rows of csv files didn’t have ISO code because they don’t have their own ISO Code. For example “Western Pacific Region” does not have ISO code. Therefore, we removed these rows from the dataset before importing it to the table.
 
+On the last day, we realized that there are countries which exist in the disorder dataset yet do not exist in the countries set. For example, African Samoa doesn't exist in the country table . This failed foreign constraints of the table. So, we have removed those from the disorder dataset.
+
 
 # Entity 6.  Financial Status
 
@@ -157,15 +159,14 @@ In conclusion, Have relationship and financial status of the countries was achie
 
 # Entity 7.  Suicide
 
-Following the creation of the Suicide table, “suicide_final.csv”(UPDATED) was imported into it.
-The reason behind updating the file was that encoding of it was not compatible with MYSQL.
+Following the creation of the Suicide table, “suicide-death-rates.csv”(UPDATED) was imported into it.
+The reason behind updating the file was that encoding of it was not compatible with MYSQL. One of the attributes of this entity is also deleted because of the incompatibility with the share and rate data.
 
 CREATE TABLE Suicide(
  isoCode VARCHAR(10) NOT NULL,
  year INTEGER NOT NULL,
  rate float,
  share float,
- ratio float,
  PRIMARY KEY (IsoCode, year),
  FOREIGN KEY (IsoCode) REFERENCES countries(isoCode) ON DELETE CASCADE );
 
