@@ -25,4 +25,5 @@ INTERSECT
 
 SELECT lp2.isoCode
 FROM CountriesPossessLifeParametrics lp2
-GROUP BY lp2.isoCode;
+GROUP BY lp2.isoCode
+HAVING AVG(lifeSatisfaction)<4.5
