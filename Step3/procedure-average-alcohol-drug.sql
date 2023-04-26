@@ -3,7 +3,7 @@ CREATE PROCEDURE get_avg_alcohol_drug (IN isoCode varchar(5))
 BEGIN 
 	SELECT C.isoCode, C.countryName, AD.Average_Alcohol, AD.Average_Drug
     FROM Average_AlcoholDrug AD, countries C
-    WHERE C.isoCode = AD.CountryIsoCode AND AD.CountryisoCode = isoCode;
+    WHERE C.isoCode = AD.isoCode AND AD.CountryisoCode = isoCode;
 
     
 END //
