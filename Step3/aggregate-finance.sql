@@ -3,7 +3,7 @@ SELECT isoCode, ROUND(AVG(GDP),0), ROUND(AVG(giniCoefficient),2)
 FROM CountriesHaveFinancialStatus
 GROUP BY isoCode
 HAVING AVG(GDP) > 
-	(SELECT AVG(GDP) FROM CountriesHaveFinancialStatus);
+	(SELECT AVG(GDP) FROM CountriesHaveFinancialStatus)
 INTERSECT		
 SELECT isoCode, ROUND(AVG(GDP),0), ROUND(AVG(giniCoefficient),2)
 FROM CountriesHaveFinancialStatus
