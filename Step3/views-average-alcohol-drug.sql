@@ -15,5 +15,3 @@ Create View Average_AlcoholDrug AS
 SELECT isoCode,Average_Alcohol,Average_Drug
 FROM Average_Alcohol
 NATURAL JOIN Average_Drug;
-
-select * From Average_AlcoholDrug;
