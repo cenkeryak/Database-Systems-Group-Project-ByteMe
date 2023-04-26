@@ -151,7 +151,7 @@ CREATE TABLE Suicide (
         ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\suicide-death-rates.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\suicide_data.csv'
 INTO TABLE Suicide
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
