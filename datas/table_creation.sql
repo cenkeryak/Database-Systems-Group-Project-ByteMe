@@ -18,19 +18,20 @@ SET @AlcoholAndDrugDisorder_path = CONCAT(@base_path, "\\share-with-alcohol-vs-d
 SET @MentalHealth_path = CONCAT(@base_path, "\\prevalence by specific mental disorders and substance use disorder UPDATED.csv");
 SET @FinancialStatus_path = CONCAT(@base_path, "\\financial-status.csv");
 SET @SuicideDeath_path = CONCAT(@base_path, "\\suicide-death-rates.csv");
-*/
-/*drop table if exists path;
+
+drop table if exists path;
 create table path(col1 VARCHAR(500), primary key(col1));
 insert into path (col1) Values (@Continents_path);
 Select * from path;
 */
+
 CREATE TABLE Continents (
 	cName VARCHAR(30) NOT NULL,
 	cCode VARCHAR(10),
 	PRIMARY KEY (cCode)
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\continents with continent_codes.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\continents with continent_codes.csv'
 INTO TABLE Continents
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
@@ -46,7 +47,7 @@ CREATE TABLE Countries (
 	FOREIGN KEY (cCode) REFERENCES Continents(cCode)
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\countries_continents.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\countries_continents.csv'
 INTO TABLE Countries
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
@@ -65,7 +66,7 @@ CREATE TABLE CountriesPossessLifeParametrics (
         ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\life_parametrics.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\life_parametrics.csv'
 INTO TABLE CountriesPossessLifeParametrics
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
@@ -90,7 +91,7 @@ CREATE TABLE havingPeopleWithMentalDisorders (
         ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\prevalence by specific mental disorders and substance use disorder UPDATED.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\prevalence by specific mental disorders and substance use disorder UPDATED.csv'
 INTO TABLE havingPeopleWithMentalDisorders
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
@@ -109,7 +110,7 @@ CREATE TABLE AlcoholAndDrugDisorder (
         ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\Share-with-alcohol-vs-drug-use-disorder.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\Share-with-alcohol-vs-drug-use-disorder.csv'
 INTO TABLE AlcoholAndDrugDisorder
 FIELDS TERMINATED BY ';'
 ENCLOSED BY ''
@@ -125,7 +126,7 @@ CREATE TABLE TemporaryFinancialStatus (
     PRIMARY KEY (name , year)
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\financial-status.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\financial-status.csv'
 INTO TABLE TemporaryFinancialStatus
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
@@ -151,7 +152,7 @@ CREATE TABLE Suicide (
         ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\Step3\\datas\\suicide_data.csv'
+LOAD DATA LOCAL INFILE 'C:\\Users\\alpay\\Desktop\\Database-Systems-Group-Project-ByteMe-main\\datas\\suicide_data.csv'
 INTO TABLE Suicide
 FIELDS TERMINATED BY ','
 ENCLOSED BY ''
