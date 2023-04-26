@@ -1,5 +1,7 @@
-CREATE VIEW High_Drug_Rate AS
-SELECT CountryIsoCode,year,drugRate
-FROM alcoholanddrugdisorder
-WHERE drugrate > 1;
-
+Create View High_Drug_Rate AS
+Select c.countryName,avg(A2.drugRate) as average_drug
+FROM alcoholanddrugdisorder A2, countries c
+where c.isoCode = A2.CountryIsoCode
+GROUP BY A2.CountryIsoCode
+ORDER BY average_drug DESC
+LIMIT 20;
