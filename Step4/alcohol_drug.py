@@ -28,8 +28,8 @@ def connectionCreator():
 mydb = connectionCreator()
 
 
-country1 = input("Please enter the first country to display:")
-country2 = input("Please enter the second country to display:")
+country1 = input("Please enter the first country to display: ")
+country2 = input("Please enter the second country to display: ")
 
 
 query1 = "SELECT C.countryName,A1.year, A1.alcoholrate, A1.drugrate, S.rate AS suicide_rate FROM alcoholanddrugdisorder A1 INNER JOIN countries C ON C.isoCode = A1.CountryIsoCode INNER Join suicide S ON S.IsoCode = A1.CountryIsoCode AND S.year = A1.year  WHERE C.countryName = \"{}\" OR C.countryName = \"{}\";".format(country1,country2)
