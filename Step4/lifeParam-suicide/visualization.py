@@ -20,6 +20,13 @@ life_expectancy = df["avgLifeExp"]
 # Per person income fixed to US Dollars in 2000
 suicide_rate = df["avgSuicideRate"]
 
+correlation_coefficient = np.corrcoef(life_satisfaction, life_expectancy)[0, 1]
+print("Correlation between life satisfaction and life expectancy: ",correlation_coefficient)
+correlation_coefficient2 = np.corrcoef(life_satisfaction,suicide_rate)[0, 1]
+print("Correlation between life satisfaction and suicide rate: ",correlation_coefficient2)
+correlation_coefficient3 = np.corrcoef(life_expectancy,suicide_rate)[0, 1]
+print("Correlation between life expectancy and suicide rate: ",correlation_coefficient3)
+
 
 
 fig = plt.figure()
