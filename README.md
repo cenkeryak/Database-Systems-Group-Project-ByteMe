@@ -1,175 +1,126 @@
-# Database-Systems-Group-Project-ByteMe
-# CS306 Project Step 2 Document
+<a name="br1"></a>CS306 Project Step 4 Document
 
-# Group Name: Byte Me
+**Group Name:** Byte Me
 
-# Group Members:
+**Group Members:**
 
-Alpay Naçar - 31133
-Anıl Şen - 29556
-Bahadır Yazıcı - 30643
-Cenker Yakışır - 28831
-Hasan Fırat Yılmaz - 29002
+*Alpay Naçar* - 31133
+*Anıl Şen* - 29556
 
-Github link: https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe
+*Bahadır Yazıcı* - 30643
+*Cenker Yakışır* - 28831
+*Hasan Fırat Yılmaz* - 29002
 
+**Github link: <https://github.com/cenkeryak/Database-Systems-Group-Project-ByteMe>**
 
-# Entity 1. Continents
+1-Life Parametrics x Suicide Relationship
 
-Initially, in the “countries_continents.csv” file, columns representing country name and iso code were dropped and later on through the deletion of duplicates on the rest of the continent name and continent code columns, “continents with continent_codes.csv” was formed. 
-Then, in mySQL table for continents was created as shown below,
+The initial aim was to form a common area for both suicide data and life parametrics data. In this
+sense, years data existing for both of these gathered and the others were omitted with the use
+of “NATURAL JOIN”. Once the desired form was achieved, “NATURAL JOIN” method was
+applied once more with *countries* table, so that the names of the countries were in our hands to
+be used for making visualization more understandable rather than iso codes.
 
-CREATE TABLE Continents ( 
-cName VARCHAR(30) NOT NULL,
- cCode VARCHAR(10),
- PRIMARY KEY (cCode)
- );
+After the data of these two were put in a proper shape, an averaging process started for
+interpreting data as a whole instead of interpreting as separate year points. Hence, the table
+was grouped by country names and the average of suicide rates, life expectancy and life
+satisfaction was taken.
 
-After this, “continents with continent_codes.csv” is imported into the Continents table.
+From this point on, scatter plot was decided on with the hope of showing the relation between
+three variables and identifying data patterns if there is any. In this plot, x and y axes were
+assigned to average life satisfaction and average life expectancy respectively. Moreover, to put
+average suicide rates into the picture, sizes and color coding were used. The larger size implies
+the larger suicide rates and this feature was supported with the colors, where colors’ meaning
+were represented through the legend used in the plot. Also, while plotting the data, it was the
+case that all countries available in our data had life expectancy greater than 40 and life
+satisfaction greater than 3. Therefore; the ranges, 0-40 for y axis and 0-3 for x axis, were
+trimmed out in order to put more focus on the real ranges.
 
-Each continent has to include at least a country as a result of the participation constraint.
-
-
-# Entity 2. Countries
-
-“countries_continents.csv” file, after it’s continent name was excluded for importation, was ready to be imported into the Countries table as shown below,
-
-CREATE TABLE Countries ( 
-isoCode VARCHAR(10),
- countryName VARCHAR(50) NOT NULL,
- cCode VARCHAR(10) NOT NULL,
- PRIMARY KEY (isoCode),
- FOREIGN KEY (cCode) REFERENCES Continents(cCode)
- );
-
-Here, the Include relationship is shown through the usage of foreign key referring to the cCode in Continents table, which represents countries’ respective continent codes.
-
-Each country has at most one continent to be included by, according to the key constraint on Include relationship and every country has to be included by a continent due to participation constraint.
+When it comes to identifying the patterns for our scatter plot, we found that there is a correlation
+between life expectancy and life satisfaction, whose correlation coefficient is
 
 
-# Entity 3.  Life Parametrics
-
-Following the creation of the CountriesPossessLifeParametrics table, “life_parametrics.csv” was imported into it without its column representing country names.
-
-CREATE TABLE CountriesPossessLifeParametrics( 
- isoCode VARCHAR(10) NOT NULL,
- year int NOT NULL,
- lifeSat DOUBLE,
- lifeSatisfaction DOUBLE,
- lifeExpectancy DOUBLE,
- PRIMARY KEY(isoCode,year), 
- FOREIGN KEY(isoCode) REFERENCES Countries(isoCode) ON DELETE CASCADE );
-
-Due to having issues in truncating decimal values in life satisfaction value in Excel, there were two columns related to the same attribute; lifeSat and lifeSatisfaction. To cope with, the below statement is implemented to drop the column lifeSat, which has the untruncated version of decimals.
-
-ALTER TABLE countriesPossessLifeParametrics DROP COLUMN lifeSat;
-
-Furthermore, the Possess relationship was achieved onto one table as a result of the one-to-many relationship through the unique identifiers, isoCode and year pairs.
-
-As a result of the features of being a weak entity for this entity, each life parametric has at most one country to be possessed, indicating a key constraint. And every life parametric has to be possessed by a country, due to the participation constraint.
 
 
-# Entity 4.  Mental Health
+<a name="br2"></a>0.79608989870765. This value can be considered as a strong positive correlation. Then, we
+analyzed the correlation between individual life parametrics and suicide rates, which was the
+ultimate aim. It turned out that there is a weak negative correlation between life expectancy and
+suicide rates, whose correlation coefficient is -0.2718401009515671. Furthermore, there is a
+very weak negative correlation between life satisfaction and suicide rates, whose correlation
+coefficient is -0.09808785820782981. Although this was not expected, we do not get any
+contradictory results that countries having higher life expectancy and satisfaction compared to
+the others, are in a range in which suicide rates are low. In addition to that, the highest suicide
+rate is observed in a country named “Lesotho” where the life expectancy and satisfaction values
+are so close to the values that are the lowest values obtained for life expectancy and
+satisfaction in our data.
 
-Following the creation of the havingPeopleWithMentalDisorders table, “prevalence by specific mental disorders and substance use disorder UPDATED.csv” was imported into it.
+2- Alcohol-Drug X Suicide Relationship
 
-CREATE TABLE havingPeopleWithMentalDisorders(
-isoCode VARCHAR(10) NOT NULL,
-year int NOT NULL,
-schizophreniaPrevalence DOUBLE,
-bipolarPrevalence DOUBLE,
-eatingDisorderPrevalence DOUBLE,
-anxietyPrevalence DOUBLE,
-drugUsePrevalence DOUBLE,
-depressiveDisordersPrevalence DOUBLE,
-alcoholUsePrevalence DOUBLE,
-mentalDisordersPrevalence DOUBLE,
-PRIMARY KEY (isoCode, year),
-FOREIGN KEY (isoCode) REFERENCES Countries(isoCode) ON DELETE CASCADE
-);
-
-First of all, the column that contains country names is removed from the CSV file due to the redundancy it causes. Moreover, some rows in the "prevalence of mental health disorders" excel file didn't have iso_code values, like the "AFRICAN REGION" row, which didn't have any iso_code. We removed those rows. In addition to that, some countries that were in the "prevalence of mental health disorders" file didn't exist in the "countries_continents" file. We removed the rows with data from those countries to avoid conflicts with the foreign key constraint.
+The relationship is between alcohol-drug rates and suicide rates is examined for 2 given input
+countries for comparison. Program asks for the 2 countries from the user. Then, alcohol-drug
 
 
-# Entity 5.  Alcohol and Drug Disorder
 
- “Share-with-alcohol-vs-drug-use-disorder.csv” file is imported into the AlcoholAndDrugDisorder table.
+<a name="br3"></a>table and suicide table is joined by NATURAL JOIN. Also countries table is joined by NATURAL
+JOIN to use country name instead of iso codes.
 
- CREATE TABLE AlcoholAndDrugDisorder(
-  isoCode VARCHAR(10) NOT NULL,
- year INTEGER NOT NULL,
- alcoholRate float,
- drugRate float,
- PRIMARY KEY (CountryIsoCode, year),
- FOREIGN KEY (CountryIsoCode) REFERENCES countries(isoCode) ON DELETE CASCADE );
+There are 2 sub graph, these 2 sub graphs consist barchart to represent alcohol or drug rate,
+and scatter plot to represent suicide rate. The color of the dots and columns represent the
+respective country in the legend.
 
-Some rows of csv files didn’t have ISO code because they don’t have their own ISO Code. For example “Western Pacific Region” does not have ISO code. Therefore, we removed these rows from the dataset before importing it to the table.
-
-On the last day, we realized that there are countries which exist in the disorder dataset yet do not exist in the countries set. For example, African Samoa doesn't exist in the country table . This failed foreign constraints of the table. So, we have removed those from the disorder dataset.
+In these graphs, we can see that change in alcohol rate or drug rate has effect on suicidal rate
+or not. Also, we can compare those 2 countries.
 
 
-# Entity 6.  Financial Status
-
-In my excel file, there are country names in place of iso codes. In the table, instead of country names, there should be iso codes corresponding to those country names. To handle this issue, firstly created a temporary table with name and year as the primary keys.
-
-CREATE TABLE TemporaryFinancialStatus (
-    name VARCHAR(50),
-    year INT NOT NULL,
-    giniCoefficient FLOAT,
-    GDP FLOAT,
-    PRIMARY KEY (name, year)
-);
-
-Following the creation of the CountriesHaveFinancialStatus table, “financial-status.csv” was imported into it.
-
-Then, added an isoCode column to that temporary table.
-
-ALTER TABLE TemporaryFinancialStatus
-ADD COLUMN isoCode VARCHAR(10);
-
-To fill this new column, Countries entity was used. For every country name, corresponding isoCode was written on that line, by looking at the Countries table.
-
-UPDATE TemporaryFinancialStatus, Countries
-SET TemporaryFinancialStatus.isoCode = Countries.isoCode
-WHERE TemporaryFinancialStatus.name = Countries.countryName;
-
-Then, we create our main table for financial status weak entity.
-
-CREATE TABLE CountriesHaveFinancialStatus (
-    isoCode VARCHAR(10),
-    year INT NOT NULL,
-    GDP FLOAT,
-    giniCoefficient FLOAT,
-    PRIMARY KEY (isoCode, year),
-    FOREIGN KEY (isoCode) REFERENCES Countries(isoCode) ON DELETE CASCADE
-);
-
-After that, I inserted the data from the temporary table into our main table.
-
-INSERT INTO CountriesHaveFinancialStatus (isoCode, year, GDP, giniCoefficient)
-SELECT isoCode, year, GDP, giniCoefficient
-FROM TemporaryFinancialStatus;
-
-At the end, I dropped the temporary table.
-
-DROP TABLE TemporaryFinancialStatus;
-
-In conclusion, Have relationship and financial status of the countries was achieved on one table as a result of key constraint of one-to-many relationship. isoCode (foreign key reference from the Countries table) and year attributes are used as primary keys. This table also includes gdp and gini attributes. Additionally, there is a participation constraint for financial status entity, this is one of the reasons why this entity is a weak entity.
 
 
-# Entity 7.  Suicide
+<a name="br4"></a>3-Mental Health Disorders x Drug Use x Suicide Relationship
 
-Following the creation of the Suicide table, “suicide-death-rates.csv” was imported into it.
-The reason behind updating the file was that encoding of it was not compatible with MYSQL. One of the attributes of this entity is also deleted because of the incompatibility with the share and rate data.
+The figure below illustrates the relationship among drug use, the prevalence of mental health
+disorders, and suicide rates for the specified isoCode of the country in the code. This
+relationship figure can be obtained for any country listed in the countries table. To achieve this, I
+utilized a natural join operation with the suicide table and the havingpeoplewithmentaldisorders
+table to retrieve the suicide rate, drug use rate, and mental disorders prevalence within a single
+query. Additionally, I performed another natural join operation with the countries table to obtain
+the corresponding country name based on the isoCode.
 
-CREATE TABLE Suicide(
- isoCode VARCHAR(10) NOT NULL,
- year INTEGER NOT NULL,
- rate float,
- share float,
- PRIMARY KEY (IsoCode, year),
- FOREIGN KEY (IsoCode) REFERENCES countries(isoCode) ON DELETE CASCADE );
+Furthermore, I executed a separate query to calculate the average values of these three
+attributes and determine the correlation between them, encompassing all countries in the
+countries list. The correlation coefficient between drug use and mental disorders was found to
+be 0.4067, indicating a positive moderate correlation. Moreover, the correlation coefficient
+between drug use and suicide rate was determined to be 0.1907, suggesting a weak positive
+correlation between drug use and suicide rate. Lastly, the correlation coefficient between mental
+disorders and suicide rate was found to be -0.0955, which is considered a negligible small
+value, indicating no significant correlation between mental disorders and suicide rate.
 
-Some of the rows were specified as the regions of the world did not possess an ISO code. Thus those rows were removed from the .csv file, before importing it. Since the data set consists of three particular data imports, some of the tuples were missing the intended attributes. For this reason those cells were completed with “NULL” values.
 
-Furthermore, one of the factors that makes the suicide entity weak is that there is a participation constraint. Since each tuple has to be linked with a country and year, there is a key constraint.
+
+
+<a name="br5"></a>4-Suicide Rate and Share
+
+The treemap below is an illustration of the suicide data which represents the countries’s average
+suicide rate(per 100k person) and share produced by aggregate functions. The table is
+produced with the help of the libraries pandas and squarify. The countries are categorized and
+colored to five broad headings by the average suicide rate. The field it occupies images the
+average share of the country.
+
+5- Drug usage x GDP per capita
+
+In this step of the project, we tried to observe the potential relationship between a country's
+GDP per capita and its drug usage. Our goal is to uncover any correlation or pattern that may
+exist between these two entities. To do that, we used the data we prepared in previous steps.
+
+To initiate our investigation, we acquired data on GDP per capita and drug usage from our
+MySQL database. Utilizing Python, we established a connection to the database and executed
+SQL queries to extract the relevant information. To simplify the process, we took average
+numbers for each country. In the end, used pandas library for manipulating and preparing the
+data for subsequent analysis.
+
+I decided to create a choropleth visualization to show countries' GDP per capita and their drug
+usage rates (Screenshots of visuals are right below). And by looking at these visuals we can
+
+
+
+
+<a name="br6"></a>say that there is strong correlation between these two entities. Countries highlighted in one of
+the visualizations are generally highlighted on the other visualization too.
